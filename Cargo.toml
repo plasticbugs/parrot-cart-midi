@@ -1,0 +1,35 @@
+[package]
+name = "parrot-midi"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Plays the Parrot Cart's MIDI music on your computer, on an emulated Roland MT-32"
+license = "MIT AND LGPL-2.1-or-later"
+repository = "https://github.com/plasticbugs/parrot-cart-midi"
+publish = false
+
+[dependencies]
+cpal = "0.18.2"
+ctrlc = "3.5.2"
+eframe = { version = "0.37.0", default-features = false, features = [
+    "accesskit",
+    "default_fonts",
+    "wgpu",
+    "wayland",
+    "x11",
+] }
+hound = "3.5.1"
+midir = "0.11.1"
+midly = { version = "0.5.3", default-features = false, features = ["std"] }
+rfd = "0.18.0"
+
+[build-dependencies]
+cc = "1.11.2"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+
+[dev-dependencies]
+egui_kittest = { version = "0.37.0", features = ["wgpu", "snapshot"] }

@@ -1,0 +1,10 @@
+# The Windows build links the C runtime statically, so it needs no extra DLLs.
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+[target.aarch64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+# The MinGW build (for cross-compiling from Linux) links its runtime statically too.
+[target.x86_64-pc-windows-gnu]
+rustflags = ["-C", "target-feature=+crt-static"]
