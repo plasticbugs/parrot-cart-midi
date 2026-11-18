@@ -54,7 +54,7 @@ It also takes ROMs that come in two halves.
 To show the program your ROMs, click **Choose ROM folder…** and pick the
 folder that has them. It remembers the folder.
 
-It also looks in these places on its own:
+It also looks for ROMs in these places:
 
 - a folder named `roms` next to the program (on macOS, next to the app)
 - your user data folder:
@@ -181,7 +181,7 @@ project, in `vendor/munt`. The build compiles it from there.
 
 ## License
 
-This program's own code is under the MIT License (LICENSE). It includes
+The code for this program is under the MIT License (LICENSE). It includes
 libmt32emu, which is under the GNU Lesser General Public License 2.1 or
 later. THIRD-PARTY.md has the details.
 
