@@ -37,7 +37,7 @@ Options:
   --headless        No window. Status goes to the terminal. Ctrl-C ends it.
   --list            List the MIDI inputs and outputs, then quit.
   --from NAME       Listen to the MIDI input whose name contains NAME,
-                    instead of the cart (\"Parrot Cart\" or \"MovieCart\").
+                    instead of the cart (\"Parrot Cart\").
   --to NAME         Send the music to the MIDI output whose name contains
                     NAME (a real MT-32 on a USB MIDI cable). No ROMs needed.
   --roms FOLDER     Look for the ROMs in FOLDER first.

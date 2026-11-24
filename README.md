@@ -81,8 +81,7 @@ back.
 On a Mac with Apple silicon, macOS may ask whether to allow the accessory to
 connect. Click **Allow**.
 
-Older cart firmware calls the cart "MovieCart MIDI". The program finds the
-cart by either name.
+The program looks for a MIDI device called "Parrot Cart MIDI".
 
 ## If you hear nothing
 
@@ -96,6 +95,8 @@ cart by either name.
   - Make sure the game has started. The cart becomes a MIDI device only once
     the game runs.
   - Try another USB-C cable. Some cables only charge.
+  - Update the SCUMM plugin. Versions before 0.2.15 give the cart an older
+    name, which this program doesn't look for.
   - On a Mac, check that you allowed the accessory. The setting is in
     **System Settings > Privacy & Security > Allow accessories to connect**.
   - On Linux, run `parrot-midi --list`. Parrot Cart MIDI should be in the

@@ -1,9 +1,9 @@
 //! Small MIDI helpers: which ports are the cart, whole messages out of a
 //! byte stream, and a short test tune.
 
-/// Names the cart's MIDI port has had. Any port whose name contains one of
-/// these, in any case, is taken to be the cart.
-pub const CART_NAMES: &[&str] = &["Parrot Cart", "MovieCart"];
+/// The cart's MIDI port name. Any port whose name contains it, in any case,
+/// is taken to be the cart.
+pub const CART_NAMES: &[&str] = &["Parrot Cart"];
 
 pub fn name_matches(name: &str, patterns: &[String]) -> bool {
     let name = name.to_lowercase();
@@ -131,7 +131,6 @@ mod tests {
     fn names() {
         let p: Vec<String> = CART_NAMES.iter().map(|s| s.to_string()).collect();
         assert!(name_matches("Parrot Cart MIDI", &p));
-        assert!(name_matches("MovieCart MIDI 0", &p));
         assert!(name_matches("PARROT CART MIDI:Parrot Cart MIDI MIDI 1 20:0", &p));
         assert!(!name_matches("IAC Driver Bus 1", &p));
     }

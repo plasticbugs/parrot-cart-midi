@@ -54,8 +54,9 @@ Rust 1.95 or newer (edition 2024), and a C++ compiler for Munt. Linux needs
   statically, so keep `vendor/munt` complete and its license with every
   download (`package.sh` writes `THIRD-PARTY-LICENSES.txt`). A new crate
   needs its license in that file, which `third_party_licenses.py` makes.
-- The cart's USB name is "Parrot Cart MIDI". Older firmware says "MovieCart
-  MIDI", and the program accepts both. Keep both in `CART_NAMES`.
+- The cart's USB name is "Parrot Cart MIDI", the only name in `CART_NAMES`.
+  The owner had the cart's old name taken out (2026-11-23); SCUMM 0.2.15
+  and later use the new one.
 - The `Synth` trait is there so a General MIDI (SoundFont) synth can be added
   later without touching the engine. Whether SCUMM gets a General MIDI option
   is still open.
